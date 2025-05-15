@@ -1,6 +1,6 @@
 # Property Assessment
 
-# • Case Overview
+ • Case Overview
 
 The Cook County Assessor’s Office (CCAO) is committed to delivering fair and transparent valuations for all residential and commercial properties. Prior to 2018, the valuation models of properties were inaccurate and lacked transparency. As part of the CCAO data science team, we aim to develop an accurate machine learning model to predict the values of over 1.8 million properties in Cook County, the second most populous county in the U.S. 
 
