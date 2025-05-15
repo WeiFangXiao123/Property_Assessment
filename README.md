@@ -1,10 +1,10 @@
 # Property Assessment
 
- • Case Overview
+# Case Overview
 
 The Cook County Assessor’s Office (CCAO) is committed to delivering fair and transparent valuations for all residential and commercial properties. Prior to 2018, the valuation models of properties were inaccurate and lacked transparency. As part of the CCAO data science team, we aim to develop an accurate machine learning model to predict the values of over 1.8 million properties in Cook County, the second most populous county in the U.S. 
 
-# • Methodology
+# Methodology
 
 To accurately predict residential property values in Cook County, we use a structured modeling approach grounded in interpretability and predictive performance. Our process begins with linear regression, a transparent and interpretable method that establishes a baseline by estimating the relationship between property characteristics and their sale prices. Dealing with missing values in numeric columns, we filled them with their respective mode, rather than mean or median, to maintain consistency with categorical treatment. As for categorical values, we also used mode and these variables were converted to factor types to prepare for modeling.
 
@@ -17,7 +17,7 @@ We used the forward stepwise procedure that evaluates each model through 10-fold
 
 This stepwise process will continue until adding more variables no longer helps the improvement of the model. We chose this approach to avoid overfitting and improve the model’s ability to generalize to new data. As more variables were added, the MSE dropped significantly at first. However, the improvement becomes smaller after each step. The best model was chosen at the point where MSE was lowest, which is Step 6, with the following variables: sale_price ~ meta_certified_est_land + econ_midincome + char_beds + meta_deed_type + econ_tax_rate + char_site. This model gains a good balance between accuracy and model simplicity.
 
-# • Conclusion
+# Conclusion
 
 The assessed_value value file contains exactly 10,000 rows, which corresponds to a property from the predict_property_data file. It includes two columns that show the following: pid – a unique property identification number ranging from 1 to 10,000 and the assessed_value – the predicted market value, shown as a numerical variable, rounded to 2 decimal places. 
 Based on the results of the Lasso regression, we observed the following summary statistics for the assessed property values: The minimum assessed value is $1,000, the maximum is $7,900,986, and the mean observed value is approximately $323,248. The median assessed value is $252,163, and this means that half of the properties are valued below this point. 
